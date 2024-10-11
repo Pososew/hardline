@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hardline/design/dimensions.dart';
 
 final darkTheme = ThemeData(
-  colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
   scaffoldBackgroundColor: const Color.fromARGB(186, 16, 21, 35),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Color.fromARGB(186, 16, 21, 35),
+  appBarTheme: AppBarTheme(
+    backgroundColor: const Color.fromARGB(186, 16, 21, 35),
     titleTextStyle: TextStyle(
       color: Colors.white,
-      fontSize: 24,
+      fontSize: fontsize24,
       fontWeight: FontWeight.w700,
     ),
   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hardline/design/dimensions.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -9,10 +10,10 @@ class RegisterScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Register'),
       ),
-      body: const Center(
+      body: Center(
         child: Text(
           'Register',
-          style: TextStyle(fontSize: 24, color: Colors.white),
+          style: TextStyle(fontSize: fontsize24, color: Colors.white),
         ),
       ),
     );
