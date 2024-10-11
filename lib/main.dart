@@ -44,7 +44,81 @@ class _HardLineProgState extends State<HardLineProg> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const RegisterScreen()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              child: const Text('Register'),
+            ),
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen()),
+                );
+              },
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white, 
+                padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                textStyle: const TextStyle(fontSize: 20), 
+              ),
+              child: const Text('Log In'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Register'),
+      ),
+      body: const Center(
+        child: Text(
+          'Register',
+          style: TextStyle(fontSize: 24, color: Colors.white),
+        ),
+      ),
+    );
+  }
+}
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Log In'),
+      ),
+      body: const Center(
+        child: Text(
+          'Login',
+          style: TextStyle(fontSize: 24, color: Colors.white),
+        ),
+      ),
     );
   }
 }
