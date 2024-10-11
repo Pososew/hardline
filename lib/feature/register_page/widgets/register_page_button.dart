@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hardline/design/dimensions.dart';
 
 class RegisterPageButton extends StatelessWidget {
   const RegisterPageButton({super.key});
@@ -14,7 +15,7 @@ class RegisterPageButton extends StatelessWidget {
       },
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-        textStyle: const TextStyle(fontSize: 20),
+        textStyle: TextStyle(fontSize: fontsize20),
       ),
       child: const Text('Register'),
     );

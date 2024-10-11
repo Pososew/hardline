@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hardline/design/dimensions.dart';
 
 class LoginPageButton extends StatelessWidget {
   const LoginPageButton({super.key});
@@ -12,7 +13,7 @@ class LoginPageButton extends StatelessWidget {
       style: TextButton.styleFrom(
         foregroundColor: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-        textStyle: const TextStyle(fontSize: 20),
+        textStyle: TextStyle(fontSize: fontsize20),
       ),
       child: const Text('Log In'),
     );
