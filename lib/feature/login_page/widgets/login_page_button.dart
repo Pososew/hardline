@@ -8,7 +8,7 @@ class LoginPageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.of(context).pushNamed('/login-screen', arguments: 1);
+        Navigator.pushReplacementNamed(context, '/login-screen');
       },
       style: TextButton.styleFrom(
         foregroundColor: Colors.white,
