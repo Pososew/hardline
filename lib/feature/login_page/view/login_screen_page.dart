@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hardline/design/dimensions.dart';
+import 'package:hardline/first_page/first_page_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,7 +13,19 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Login'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back), 
+          onPressed:(){
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const FirstScreen(title: 'Linemind',)),
+            );
+          }
+          
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 35),
         child: Column(
@@ -25,6 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Username',
+                      prefixIcon: const Icon(Icons.person),
                       labelStyle: TextStyle(
                         fontSize: fontsize18,
                         color: Colors.white,
@@ -37,6 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Password',
+                      prefixIcon: const Icon(Icons.key),
                       labelStyle: TextStyle(
                         fontSize: fontsize18,
                         color: Colors.white,
