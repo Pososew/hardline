@@ -4,7 +4,7 @@ import 'package:hardline/first_page/first_page_screen.dart';
 
 final routes = {
   '/': (context) => const FirstScreen(
-        title: 'First Screen App',
+        title: 'Linemind',
       ),
   '/register-screen': (context) => const RegisterScreen(),
   '/login-screen': (context) => const LoginScreen(),
