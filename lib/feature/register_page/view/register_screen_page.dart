@@ -9,6 +9,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreen extends State<RegisterScreen>{
+  bool _isPasswordVisible = false;
   get obscureText => null;
 
   @override
@@ -27,6 +28,7 @@ class _RegisterScreen extends State<RegisterScreen>{
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   TextField(
+                    style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       labelText: 'Email',
                       prefixIcon: const Icon(Icons.email),
@@ -39,6 +41,7 @@ class _RegisterScreen extends State<RegisterScreen>{
                   SizedBox(height: height15,
                   ),
                   TextField(
+                    style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       labelText: 'Username',
                       prefixIcon: const Icon(Icons.person),
@@ -52,9 +55,22 @@ class _RegisterScreen extends State<RegisterScreen>{
                     height: height15,
                   ),
                   TextField(
+                    style: const TextStyle(color: Colors.white),
+                    obscureText: !_isPasswordVisible,
                     decoration: InputDecoration(
                       labelText: 'Password',
                       prefixIcon: const Icon(Icons.key),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isPasswordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                        ),
+                        onPressed: (){
+                          setState(() {
+                            _isPasswordVisible = !_isPasswordVisible;
+                          });
+                        },),
                       labelStyle: TextStyle(
                         fontSize: fontsize18,
                         color: Colors.white,
